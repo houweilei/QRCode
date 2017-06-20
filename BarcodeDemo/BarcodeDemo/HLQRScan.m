@@ -53,7 +53,7 @@
     [self.session addInput:deviceInput];
     [self.session addOutput:self.output];
     
-    self.output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeEAN8Code,AVMetadataObjectTypeCode128Code];
+    self.output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
 
     
     self.previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
@@ -178,7 +178,6 @@
 - (void)stopLineAnimation {
     self.contentView.layer.speed = 0;
 }
-
 
 #pragma mark - lazy init
 - (UIView *)animationLine {
